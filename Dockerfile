@@ -6,7 +6,7 @@ RUN yum update -y &&\
         libmlx4 libmlx5 ibutils libibcm libibcommon libibmad libibumad && \
     yum install -y rdma  librdmacm-utils librdmacm-devel librdmacm \
         libibumad-devel perftest && \
-    yum install -y net-tools iproute && \
+    yum install -y net-tools iproute bind-utils && \
     yum clean all
 
 ENTRYPOINT /bin/bash
