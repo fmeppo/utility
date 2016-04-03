@@ -7,6 +7,7 @@ RUN yum update -y &&\
     yum install -y rdma  librdmacm-utils librdmacm-devel librdmacm \
         libibumad-devel perftest && \
     yum install -y net-tools iproute bind-utils && \
+    yum install -y strace && \
     yum clean all
 
 ENTRYPOINT /bin/bash
