@@ -8,6 +8,7 @@ RUN yum update -y &&\
         libibumad-devel perftest && \
     yum install -y net-tools iproute bind-utils && \
     yum install -y strace && \
-    yum clean all
+    yum clean all && \
+    adduser -b /home -s /bin/bash -g users test
 
 ENTRYPOINT /bin/bash
