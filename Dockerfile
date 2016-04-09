@@ -10,7 +10,7 @@ RUN yum update -y &&\
     yum install -y rdma  librdmacm-utils librdmacm-devel librdmacm \
         libibumad-devel perftest && \
     yum install -y net-tools iproute bind-utils tcpdump && \
-    yum install -y strace which && \
+    yum install -y strace which vim less rsync && \
     yum install -y gdisk && \
     yum install -y git make golang rpm-build && \
     yum clean all && \
