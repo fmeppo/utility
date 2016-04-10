@@ -15,7 +15,7 @@ RUN echo "infernalis" > /etc/yum/vars/cephrelease && \
         libmlx4 libmlx5 ibutils libibcm libibcommon libibmad libibumad && \
     yum install -y rdma  librdmacm-utils librdmacm-devel librdmacm \
         libibumad-devel perftest && \
-    yum install -y net-tools iproute bind-utils tcpdump && \
+    yum install -y net-tools iproute bind-utils tcpdump traceroute && \
     yum install -y strace which vim less rsync && \
     yum install -y gdisk && \
     yum install -y git make golang rpm-build && \
