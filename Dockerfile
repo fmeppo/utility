@@ -4,7 +4,11 @@ MAINTAINER Mike Shuey "shuey@fmepnet.org"
 ENV GOPATH=/root/work
 ADD wipedisk.sh /usr/local/sbin/wipedisk.sh
 ADD gitconfig /root/.gitconfig
-RUN yum update -y &&\
+ADD ceph.repo /etc/yum.repos.d/ceph.repo
+RUN echo "infernalis" > /etc/yum/vars/cephrelease && \
+    echo "el7" > /etc/yum/vars/distro && \
+    rpm --import 'https://download.ceph.com/keys/release.asc' && \
+    yum update -y &&\
     yum install -y libibverbs-utils libibverbs-devel libibverbs-devel-static \
         libmlx4 libmlx5 ibutils libibcm libibcommon libibmad libibumad && \
     yum install -y rdma  librdmacm-utils librdmacm-devel librdmacm \
