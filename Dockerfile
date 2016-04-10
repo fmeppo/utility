@@ -8,6 +8,7 @@ ADD ceph.repo /etc/yum.repos.d/ceph.repo
 RUN echo "infernalis" > /etc/yum/vars/cephrelease && \
     echo "el7" > /etc/yum/vars/distro && \
     rpm --import 'https://download.ceph.com/keys/release.asc' && \
+    rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7 && \
     yum update -y &&\
     yum install -y epel-release && \
     yum install -y libibverbs-utils libibverbs-devel libibverbs-devel-static \
@@ -18,6 +19,7 @@ RUN echo "infernalis" > /etc/yum/vars/cephrelease && \
     yum install -y strace which vim less rsync && \
     yum install -y gdisk && \
     yum install -y git make golang rpm-build && \
+    yum install -y ceph && \
     yum clean all && \
     adduser -b /home -s /bin/bash -g users test && \
     mkdir /root/work
