@@ -9,6 +9,7 @@ RUN echo "infernalis" > /etc/yum/vars/cephrelease && \
     echo "el7" > /etc/yum/vars/distro && \
     rpm --import 'https://download.ceph.com/keys/release.asc' && \
     yum update -y &&\
+    yum install -y epel-release && \
     yum install -y libibverbs-utils libibverbs-devel libibverbs-devel-static \
         libmlx4 libmlx5 ibutils libibcm libibcommon libibmad libibumad && \
     yum install -y rdma  librdmacm-utils librdmacm-devel librdmacm \
