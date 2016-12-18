@@ -20,6 +20,8 @@ RUN echo "infernalis" > /etc/yum/vars/cephrelease && \
     yum install -y gdisk && \
     yum install -y git make golang rpm-build && \
     yum install -y ceph && \
+    yum install -y python-pip && \
+    yum install -y npm && \
     yum clean all && \
     adduser -b /home -s /bin/bash -g users test && \
     mkdir /root/work
