@@ -29,4 +29,8 @@ RUN echo "infernalis" > /etc/yum/vars/cephrelease && \
     mkdir /tmp/ssh-agent
 
 ENV SSH_AUTH_SOCK=/tmp/ssh-agent/agent
+
+# Exposing 4000, in case we use hexo server to preview a blog.
+EXPOSE 4000
+
 ENTRYPOINT /bin/bash
