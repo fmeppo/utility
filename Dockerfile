@@ -25,6 +25,7 @@ RUN echo "infernalis" > /etc/yum/vars/cephrelease && \
     yum clean all && \
     adduser -b /home -s /bin/bash -g users test && \
     npm install hexo-cli -g && \
+    npm cache clean && \
     mkdir /root/work && \
     mkdir /tmp/ssh-agent
 
