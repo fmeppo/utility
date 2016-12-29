@@ -17,7 +17,7 @@ RUN echo "infernalis" > /etc/yum/vars/cephrelease && \
         libibumad-devel perftest && \
     yum install -y net-tools iproute bind-utils tcpdump traceroute iperf3 && \
     yum install -y strace which vim less rsync && \
-    yum install -y gdisk && \
+    yum install -y gdisk awscli && \
     yum install -y git make golang rpm-build && \
     yum install -y ceph && \
     yum install -y python-pip && \
